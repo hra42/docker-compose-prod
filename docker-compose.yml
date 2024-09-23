@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   traefik:
@@ -17,10 +17,8 @@ services:
       - "./certs:/certs:ro"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.yourdomain.com`)"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.postrausch.tech`)"
       - "traefik.http.routers.traefik.entrypoints=websecure"
       - "traefik.http.routers.traefik.tls=true"
-      - "traefik.http.routers.traefik.tls.domains[0].main=yourdomain.com"
-      - "traefik.http.routers.traefik.tls.domains[0].sans=*.yourdomain.com"
-
-  # Add your other services here
+      - "traefik.http.routers.traefik.tls.domains[0].main=postrausch.tech"
+      - "traefik.http.routers.traefik.tls.domains[0].sans=*.postrausch.tech"
